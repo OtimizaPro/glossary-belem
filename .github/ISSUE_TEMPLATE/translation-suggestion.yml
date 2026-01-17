@@ -1,0 +1,83 @@
+name: "Sugestão de Tradução"
+description: "Sugerir nova tradução ou melhoria no glossário"
+title: "[GLOSS] "
+labels: ["translation", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Sugestão de Tradução
+        Forneça informações detalhadas sobre sua sugestão de tradução.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Idioma Fonte
+      options:
+        - Grego (Koiné)
+        - Hebraico (Bíblico)
+        - Aramaico
+    validations:
+      required: true
+
+  - type: input
+    id: original-word
+    attributes:
+      label: Palavra Original
+      description: A palavra no alfabeto original
+      placeholder: "ex: λόγος (logos)"
+    validations:
+      required: true
+
+  - type: input
+    id: transliteration
+    attributes:
+      label: Transliteração
+      placeholder: "ex: logos"
+
+  - type: input
+    id: strongs-number
+    attributes:
+      label: Número Strong's
+      placeholder: "ex: G3056 ou H1697"
+    validations:
+      required: true
+
+  - type: input
+    id: current-translation
+    attributes:
+      label: Tradução Atual (se existir)
+      description: Como está traduzido atualmente?
+
+  - type: input
+    id: suggested-translation
+    attributes:
+      label: Tradução Literal Sugerida
+      description: Sua proposta de tradução literal
+    validations:
+      required: true
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justificativa Etimológica/Linguística
+      description: Explique por que esta tradução é mais literal/precisa
+    validations:
+      required: true
+
+  - type: textarea
+    id: biblical-examples
+    attributes:
+      label: Exemplos de Uso Bíblico
+      description: Cite 2-3 versículos onde esta palavra aparece
+      placeholder: |
+        - João 1:1
+        - Apocalipse 19:13
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Referências Acadêmicas
+      description: Léxicos, dicionários ou fontes acadêmicas consultadas

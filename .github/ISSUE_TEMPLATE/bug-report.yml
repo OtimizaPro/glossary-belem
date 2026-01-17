@@ -1,0 +1,43 @@
+name: "Erro no Glossário"
+description: "Reportar erro ou inconsistência no glossário"
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: dropdown
+    id: glossary-type
+    attributes:
+      label: Glossário Afetado
+      options:
+        - Grego (greek.json)
+        - Hebraico (hebrew.json)
+        - Palavras Originais (keep_original.json)
+    validations:
+      required: true
+
+  - type: input
+    id: word
+    attributes:
+      label: Palavra com Erro
+      placeholder: "ex: logos ou Strong's G3056"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição do Erro
+      description: Descreva o problema encontrado
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Valor Esperado
+      description: Qual deveria ser o valor correto?
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Referências
+      description: Fontes que comprovam o erro

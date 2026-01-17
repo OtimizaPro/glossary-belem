@@ -1,0 +1,44 @@
+name: Validate Glossary
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          echo "Validating greek.json..."
+          jq empty greek.json
+
+          echo "Validating hebrew.json..."
+          jq empty hebrew.json
+
+          echo "Validating keep_original.json..."
+          jq empty keep_original.json
+
+          echo "All JSON files are valid!"
+
+      - name: Check for duplicates
+        run: |
+          echo "Checking for duplicate keys in greek.json..."
+          GREEK_KEYS=$(jq -r 'keys[]' greek.json | sort | uniq -d)
+          if [ -n "$GREEK_KEYS" ]; then
+            echo "Duplicate keys found in greek.json: $GREEK_KEYS"
+            exit 1
+          fi
+
+          echo "Checking for duplicate keys in hebrew.json..."
+          HEBREW_KEYS=$(jq -r 'keys[]' hebrew.json | sort | uniq -d)
+          if [ -n "$HEBREW_KEYS" ]; then
+            echo "Duplicate keys found in hebrew.json: $HEBREW_KEYS"
+            exit 1
+          fi
+
+          echo "No duplicates found!"
