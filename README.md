@@ -1,5 +1,10 @@
 # Glossário Belem An.C - Tradução Bíblica Colaborativa
 
+[![Validate JSON](https://github.com/OtimizaPro/glossary-belem/actions/workflows/validate.yml/badge.svg)](https://github.com/OtimizaPro/glossary-belem/actions/workflows/validate.yml)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Good First Issues](https://img.shields.io/github/issues/OtimizaPro/glossary-belem/good%20first%20issue?color=7057ff&label=good%20first%20issues)](https://github.com/OtimizaPro/glossary-belem/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
 > Glossário colaborativo para a tradução literal da Bíblia Belem An.C 2025
 
 ## Sobre
