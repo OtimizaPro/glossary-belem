@@ -9,7 +9,7 @@
 
 ## Sobre
 
-Este repositório contém os glossários de tradução do **Hebraico**, **Grego Koiné** e **Aramaico** utilizados na tradução Bíblia Belem An.C 2025.
+Este repositório contém os glossários de tradução do **Hebraico**, **Grego Koiné** e **Aramaico** utilizados na tradução Bíblia Belem An.C 2025 em aculpaedasovelhas.org
 
 A tradução segue o princípio de **literalidade rígida** (*ipsis litteris*), onde:
 
